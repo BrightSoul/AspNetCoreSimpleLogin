@@ -3,6 +3,6 @@
 }
 <div>
     <h1>@ViewData["Title"]</h1>
-    <p>Questa è una pagina riservata all'amministratore ma dato che hai fatto il login sei riuscito ad accedere!</p>
+    <p>Ciao <strong>@User.Identity.Name</strong>. Questa è una pagina riservata all'amministratore ma dato che hai fatto il login sei riuscito ad accedere!</p>
     <p><a asp-action="Logout">Esci</a></p>
 </div>

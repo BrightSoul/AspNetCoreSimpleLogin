@@ -48,9 +48,9 @@ namespace SimplePass.Controllers
 
                 if (passwordHash == inputPasswordHash)
                 {
-                    // Creo la mia ClaimsPrincipal. Ci metto dentro giusto il claim dello username
-                    Claim claim = new Claim(ClaimTypes.NameIdentifier, username);
-                    ClaimsIdentity identity = new ClaimsIdentity(new[] { claim }, CookieAuthenticationDefaults.AuthenticationScheme);
+                    // Creo la mia ClaimsPrincipal. Ci metto dentro giusto il claim del nome
+                    Claim nameClaim = new Claim(ClaimTypes.Name, username);
+                    ClaimsIdentity identity = new ClaimsIdentity(new[] { nameClaim }, CookieAuthenticationDefaults.AuthenticationScheme);
                     ClaimsPrincipal principal = new ClaimsPrincipal(identity);
 
                     // Emetto il cookie di autenticazione
